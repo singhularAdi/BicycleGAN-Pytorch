@@ -17,7 +17,7 @@ To run, set the project_folder variable and root_dir as required. The directory 
  Inference can be performed by 
  
  ```
-z_real = torch.rand([1,8])
+z_random = torch.rand([1,8]) # generate a random seed vector
 # outline is an outline from the original distribution
-fake_images = generator(norm(torch.unsqueeze(outline,0).to(device)),z_real.to(device))
+fake_images = generator(norm(torch.unsqueeze(outline,0).to(device)),z_random.to(device))
  ```
